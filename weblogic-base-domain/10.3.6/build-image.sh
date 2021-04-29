@@ -1,0 +1,1 @@
+docker build --force-rm -t weblogic-base-domain:10.3.6 .
