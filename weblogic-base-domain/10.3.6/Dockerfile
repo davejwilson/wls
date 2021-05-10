@@ -8,9 +8,12 @@ ENV USER_MEM_ARGS -Xms256m -Xmx512m -XX:MaxPermSize=1024m
 ENV EXTRA_JAVA_PROPERTIES $EXTRA_JAVA_PROPERTIES -Djava.security.egd=file:///dev/urandom
 
 # install aspectj weaver, runtime and tracing aspect
-COPY aspectjweaver-1.7.2.jar /u01/
+COPY aspectjweaver-1.7.4.jar /u01/
 COPY aspectjrt-1.7.4.jar /u01/
 COPY crm-aspect-trace-1.0.0-SNAPSHOT.jar /u01/
+COPY jackson-databind-2.11.1.jar /u01/
+COPY jackson-annotations-2.11.1.jar /u01/
+COPY jackson-core-2.11.1.jar /u01/
 
 # Add files required to build this image
 COPY create-wls-domain.py /u01/oracle/
