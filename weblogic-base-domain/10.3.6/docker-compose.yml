@@ -9,7 +9,6 @@ services:
     volumes:
       - 'basedomain-data:/u01/oracle/weblogic/user_projects/domains/base_domain'
     environment: 
-      - JAVA_OPTIONS=-Xbootclasspath/p:/u01/crm-aspect-trace-jar-with-dependencies.jar -javaagent:/u01/aspectjweaver-1.7.4.jar
-#      - JAVA_OPTIONS=-Xbootclasspath/p:/u01/crm-aspect-trace-1.0.0-SNAPSHOT.jar:/u01/aspectjrt-1.7.4.jar:/u01/jackson-databind-2.11.1.jar:/u01/jackson-core-2.11.1.jar:/u01/jackson-annotations-2.11.1.jar -javaagent:/u01/aspectjweaver-1.7.4.jar
+      - JAVA_OPTIONS=-Xbootclasspath/p:/u01/crm-aspect-trace-jar-with-dependencies.jar -javaagent:/u01/aspectjweaver-1.7.4.jar -Da.vsp.servicelocator.environment.type=QA
 volumes: 
   basedomain-data:
